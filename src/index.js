@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function dogBreeds() {
     return fetch('https://dog.ceo/api/breeds/list/all')
         .then(response => response.json())
-        .then(data => renderBreed(data))
+        .then(data => renderBreed(data.message))
 }
 function renderBreed(data) {
     const ul = document.getElementById('dog-breeds');
